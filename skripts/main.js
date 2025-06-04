@@ -19,8 +19,8 @@ function spawnFood() {
 
   do {
     newFood = {
-      x: Math.floor(Math.random() * 18) * box,
-      y: Math.floor(Math.random() * 18) * box
+      x: Math.floor(Math.random() * 19) * box,
+      y: Math.floor(Math.random() * 19) * box
     };
     collisionDetected = snake.some(segment => segment.x === newFood.x && segment.y === newFood.y);
     attempts++;
@@ -73,8 +73,8 @@ function draw() {
 
 
   if (
-    headX < 0 || headX >= canvasSize ||
-    headY < 0 || headY >= canvasSize ||
+    headX < 0 || headX > canvasSize ||
+    headY < 0 || headY > canvasSize ||
     collision(newHead, snake)
   ) {
     clearInterval(game);
