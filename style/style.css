@@ -6,10 +6,13 @@
 
 
 
+.nav_color{
+    background-color:#d1e7dd !important;
+}
 .container {
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
+  flex-direction: row;
+  
   gap: 10px;
 }
 
